@@ -1,0 +1,22 @@
+version: '3'
+services:
+    httpbin-app:
+        image: kennethreitz/httpbin
+        environment:
+            - "GUNICORN_CMD_ARGS=\"--capture-output --error-logfile - --access-logfile - --access-logformat \"%(h)s %(t)s %(r)s %(s)s Host: %({Host}i)s}\"\""
+    nginx1:
+        image: nginxplus:r25
+        volumes:
+            - ./nginx1.conf:/etc/nginx/nginx.conf
+        ports:
+            - "81:80"
+            - "8080:8080"
+    nginx2:
+        image: nginxplus:r25
+        volumes:
+            - ./api_secret_1.jwk:/etc/nginx/api_secret_1.jwk
+            - ./api_secret_2.jwk:/etc/nginx/api_secret_2.jwk
+            - ./nginx2.conf:/etc/nginx/nginx.conf
+        ports:
+            - "82:80"
+
