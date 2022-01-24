@@ -89,6 +89,7 @@ Once you remove the token from the Key-Value table, these request will fails.
 
 
 ## Other possibilities
+- We use NGINX API to Add/Remove/Upate Key-Value store, dev team can integrate into their pipeline to automate the key management operation
 - Currently we use request URI as key to locate the relevant JWT token, we can consider using header, parameters or other variables. This can be used to impose certain check on microservices requests to NGINX-1
 - We can create different Key-Value zone for different requirements
 
