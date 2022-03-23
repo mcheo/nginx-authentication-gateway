@@ -1,6 +1,6 @@
 # nginx-authentication-gateway
 
-1 dev team mentioned their microservices need to call outside cluster API services. They can influence how the outside cluster API implements the authentication, in this case JWT validation. But they find it challenging to do key management for various microservices. Should they put the JWT token as k8s secret for these microservices? How about renewing the expiry token? Revoking the token? and etc
+1 dev team mentioned their microservices need to call outside cluster API services. They can influence how the outside cluster API implements the authentication, in this case JWT validation. But they find it challenging to do key management for various microservices. Should they put the JWT token as k8s secret for these microservices? How about renewing the expired token? Revoking the token? and etc
 
 This repo demonstates how to leverage NGINX Plus as the gateway to authenticate with outside cluster API services.
 
