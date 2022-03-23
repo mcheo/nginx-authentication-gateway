@@ -4,6 +4,10 @@
 
 This repo demonstates how to leverage NGINX Plus as the gateway to authenticate with outside cluster API services.
 
+![NGINX Authentication Gateway](https://raw.githubusercontent.com/mcheo-nginx/nginx-authentication-gateway/main/UseNGINXasAuthenticationGateway.png)
+
+
+
 ## Prerequisite: 
 NGINX Plus [You may request for a NGINX Plus [Trial License](https://www.nginx.com/free-trial-request/) and build the [NGINX Plus Docker Image](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-docker/)]
 
